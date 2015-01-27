@@ -8,7 +8,7 @@
   <script src="src/js/modules/nasty-marimba.js"></script>
 </head>
 <body>
-	<h1>A simple web audio marimba</h1>
+	<h1>A nasty web audio marimba</h1>
   <div class="marimba">
     <section class="marimba__kbd">
       <div id="c2" class="marimba__note" data-sound="src/audio/marimba/c-2.wav">c2</div>
@@ -24,6 +24,14 @@
       <div id="as2" class="marimba__note marimba__note--accidental" data-sound="src/audio/marimba/a-sharp-2.wav">a#2</div>
       <div id="b2" class="marimba__note" data-sound="src/audio/marimba/b-2.wav">b2</div>
       <div id="b2" class="marimba__note" data-sound="src/audio/marimba/c-3.wav">c3</div>
+    </section>
+    <section class="marimba__controls">
+      <label for="gain">Volume</label>
+      <input type="range" min="0" max="5" step="0.1" value="1" data-control="gain" name="gain">
+      <label for="gain">Mix</label>
+      <input type="range" min="0" max="5" step="0.1" value="0" data-control="gain" name="gain">
+      <label for="gain">Filter</label>
+      <input type="range" min="0" max="5" step="0.1" value="0" data-control="gain" name="gain">
     </section>
   </div>
   <footer>
