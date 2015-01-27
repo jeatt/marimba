@@ -20,14 +20,16 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function() {
-  gulp.src('src/js/**/*.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'))
+    .pipe(reload({stream:true}));
 });
 
 // Default task to be run with `gulp`
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
-  gulp.watch("src/scss/*.scss", ['sass']);
+  gulp.watch("src/scss/**/*.scss", ['sass']);
+  gulp.watch("src/js/**/*.scss", ['js']);
 });
 
 gulp.task('build', function() {
