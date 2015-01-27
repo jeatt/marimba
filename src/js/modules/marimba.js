@@ -28,11 +28,16 @@ function addAudioProperties(object) {
 }
 
 $(function() {
-    $('.inst__note').each(function() {
+    $('.marimba__note').each(function() {
         addAudioProperties(this);
     });
  
-    $('.inst__note').click(function() {
+    $('.marimba__note').mouseenter(function() {
         this.play();
+        $(this).addClass('marimba__note--sounding');
+    });
+
+    $('.marimba__note').mouseleave(function() {
+        $(this).removeClass('marimba__note--sounding');
     });
 });
